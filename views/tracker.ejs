@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GyanDaan | Time Tracker</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Red Hat Display' rel='stylesheet'>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script>
+        const email = "<%= user_email %>";
+        const isEducator = "<%= isEducator %>";
+
+    </script>
+    <link rel="stylesheet" type="text/css" href="/css/tracker.css" />
+    <link rel="stylesheet" type="text/css" href="/css/tags.css" />
+    <script src="/js/time-tracker.js" defer></script>
+    <script src="/js/tags.js"></script>
+
+</head>
+
+<body>
+    <div class="body_container">
+         <nav class="navbar navbar-expand-md navbar-light">
+
+           <a  href="/home" style="margin-right: auto;"><img src="/images/logo.png" style="width: 100px;" /></a>
+          
+
+             
+                <ul  style="list-style-type: none;margin-bottom: 0%;margin-right: 1%;">
+                    <li>
+
+                     
+                            <ul class="navbar-nav" aria-labelledby="dropdownMenuButton1" >
+								 <li class="nav-item">
+                               <div class="dropdown">
+                            <a class="dropdown-toggle nav-link active" id="user_data" href='#' role="button"
+                                data-toggle="dropdown" aria-expanded="false">
+                                <img src="<%- user_profilePic %>" style="display:inline;height: 2rem; width: 2rem;border-radius: 50%;"/>
+                                                          <%= user_name %>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="navbar_menu">
+                                <li>
+                                    <a href="/profile/<%=user_email%>" class="dropdown-item">
+
+                                        <i class="fas fa-address-card"></i> Profile</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href='/donate' type="button">
+
+                                        <i class="fas fa-donate"></i> Donate</a>
+
+
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href='/logout'>
+                                        <i class="fas fa-sign-out-alt"></i> Sign out</a>
+
+                                </li>
+                            </ul>
+                        </div>
+							</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+      <div class="main_time_container">
+            <div id="main_time_display">
+                <div onclick="(()=>{location='/home';})();"
+                    style="white-space: unset; text-align: left;cursor:pointer; margin-top:1rem;margin-left:4%;">
+                    <i class="fas fa-home"></i> Home
+                </div>
+
+            </div>
+            <div class="progress_time_container">
+                <div id="progress-bar"></div>
+                <h5 style="margin-left: 1%;">Labels:</h5>
+
+                <div id="progress-bar-labels">
+                </div>
+                <div id="all_time_display">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

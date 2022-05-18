@@ -1,0 +1,13 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin: auto;
+}
+.form-container {
+  width: 60%;
+  margin: auto;
+}
+.form-group {
+  color: white;
+}

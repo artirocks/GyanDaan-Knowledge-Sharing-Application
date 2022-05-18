@@ -1,0 +1,252 @@
+
+body {
+  background-color: white;
+  overflow: hidden;
+  height: 100vh;
+}
+.body_container {
+  background-color: white;
+  overflow-x: hidden;
+  height: 100%;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  background-color: lightgrey;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(79, 70, 229);
+  border-radius: 100px;
+}
+.custom_link {
+  text-decoration: none;
+  font-size: 100%;
+  margin-right: 1%;
+  color: black;
+  align-self: flex-start;
+}
+.custom_link:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.form_attr {
+  align-self: center;
+  justify-content: center;
+}
+
+img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.avatar {
+border-radius: 50%;
+width: 25vw;
+height: 25vw;
+float: left;
+}
+.rooms_container {
+  /* margin-top: 6.5%;
+  margin-left: 2.5%;
+  margin-right: 1.5%; */
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 5%;
+ 
+}
+#rooms_container_title, #educators_container_title{
+   margin-top: 2%;
+    color: rgb(79, 70, 229);
+
+}
+
+.room_card {
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	border-radius: 5px;
+	color: black;
+	box-sizing: border-box;
+	line-height: 1.5em;
+	height: 350px;
+	width: 300px;
+    display:flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 2%;
+    margin-top: 3%;
+}
+.room_card:hover {
+ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+ 
+}
+
+.custom_link {
+  text-decoration: none;
+  /* color: white; */
+  font-size: 100%;
+  margin-right: 1%;
+}
+.custom_link:hover {
+  text-decoration: none;
+  /* color: white; */
+}
+.form_attr {
+  align-self: center;
+  justify-content: center;
+}
+#requests_container,
+#all_time_display {
+  display: grid;
+  margin-top: 2%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-right: 1%;
+}
+.request {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid white;
+  overflow: hidden;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  padding: 5%;
+}
+.avatar {
+  border-radius: 50%;
+  width: 2.5vw;
+  height: 5vh;
+  float: left;
+}
+#stat_nav{
+display: flex;
+justify-content:center;
+  flex-wrap: wrap;
+margin: auto;
+width: 100%;
+
+}
+.cus-nav-link{
+  background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	border-radius: 5px;
+  font-size: 1rem;
+	box-sizing: border-box;
+ margin-bottom:0%;
+}
+.cus-nav-link:hover{
+background: #e0e7ff;
+border-color: #e0e7ff;
+ color: rgb(79, 70, 229);
+
+}
+.room_content{
+    display:flex;
+    flex-direction: column;
+height: 40%;
+    box-sizing: border-box;
+        margin:2%;
+}
+.icon {
+	display: flex;
+    margin:auto;
+	height: 100%;
+
+}
+.icon img {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.room_bottom{
+    margin: auto;
+
+    width: 100%;
+}
+.room {
+  height:2rem;
+  line-height: 2rem;
+	font-size: 1.5rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+  display:flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+}
+.nav-link-par{
+  margin-right: 1%;
+  	color:grey;
+}
+.active{
+   color: rgb(79, 70, 229);
+}
+.rooms_container a{
+  text-decoration: none;
+  color:black;
+}
+.rooms_container_parent{
+margin-left:5%;
+margin-right:5%;
+
+}
+.second-nav{
+    display: flex;
+   
+
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+#navbar7{
+  justify-content:center;
+}
+@media(max-width:991px){
+  #stat_nav{
+
+
+display:flex;
+flex-direction: column;
+
+
+width: 100%;
+
+margin-top: 2%;
+}
+.nav-link-par{
+  margin-right: 0%;
+  margin-bottom: 2%;
+  
+}
+/* #createRequestLink{
+  width: 100%;
+} */
+}
+.room_description {
+	text-align: center;
+	width: 100%;
+  height: 3rem;
+  line-height: 1.5rem;
+    overflow: hidden;
+	text-overflow: ellipsis;
+  
+     display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4; 
+    margin: auto;
+
+    color: #6a7280;
+      
+ 
+	
+}
+
+.room_content{
+    display:flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+}
+  

@@ -1,0 +1,267 @@
+body {
+  overflow: hidden;
+}
+.main_window {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.left_window {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.remote-stream-container {
+  max-width: 100%;
+}
+
+.videos_container {
+  height: calc(100% - 60px);
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left_window_controls {
+  display: inline-block;
+  justify-content: center;
+  padding: 5px;
+  overflow: auto;
+  border-color: transparent;
+  background-color: black;
+}
+
+.left_window_controls_block {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.right_window {
+  width: 30%;
+  background-color: #242324;
+  border-left: 2px solid grey;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.right_window_header {
+  padding-top: 5px;
+  color: #f5f5f5;
+  text-align: center;
+  font-size: 3vmin;
+}
+
+.right_window_chat {
+  flex-grow: 1;
+  margin-left: 1%;
+  overflow-y: auto;
+  max-width: 100%;
+  margin-bottom: 1%;
+}
+
+#chat_messages {
+  box-sizing: border-box;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  margin-bottom: 1%;
+}
+
+
+.right_window_chat::-webkit-scrollbar {
+  width: 8px;
+  background-color: #292929;
+}
+
+.right_window_chat::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 100px;
+}
+
+.mute {
+  display: flex;
+  float: right;
+  color: white;
+}
+.username {
+  font-size: 3vmin;
+  float: left;
+  color: white;
+}
+.video__container {
+  position: relative;
+  flex-grow: 1;
+  height: calc( 100% - 60px);
+  z-index: -1;
+  max-width: 100%;
+}
+.remote-stream-container {
+  z-index: 0;
+  display: flex;
+  padding: 1.5%;
+  border-style: solid;
+  border-radius: 25px;
+  border-width: thick;
+  flex-direction: column;
+}
+#video-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+.pointer {
+  transition: all ease-in-out 0.2s;
+}
+
+.fr-draggable,
+.fr-gvc,
+.fr-dvb,
+.fr-video,
+iframe,
+video {
+  width: 100% !important;
+}
+
+.participants_window {
+  width: 30%;
+  background-color: #242324;
+  border-left: 2px solid grey;
+  display: none;
+  overflow: hidden;
+  flex-direction: column;
+  padding: 0.5%;
+}
+#participants_list::-webkit-scrollbar {
+  width: 8px;
+  background-color: #292929;
+}
+
+#participants_list::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 100px;
+}
+
+
+.pin_icon {
+  color: #e8eaed;
+  z-index: 1;
+  font-size: 1.5rem;
+  position: absolute;
+  background-color: #5f6368;
+  top: 48%;
+  left: 48%;
+  border-radius: 50%;
+  padding: 1%;
+  /* display: none; */
+}
+.video__container > .pin_icon {
+  visibility: hidden;
+}
+.video__container:hover > .pin_icon {
+  visibility: visible;
+}
+.message_container {
+  max-width: 80%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+.message_container pre {
+  color: inherit;
+  display: inline;
+  white-space: pre-wrap;
+}
+.main__controls__button {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  margin:0.4% 1%;
+  height:50px;
+  width:50px;
+  /* padding: 5% 0; */
+}
+.main__controls {
+	overflow: hidden;
+	/* height:fit-content; */
+	display: flex;
+  background-color: #1c1e20;
+	color:whitesmoke;
+  height: 60px;
+  width: 100%;
+  justify-content: center;	
+}
+.participant_block{
+  display: flex;
+  color:white;
+  padding:2%; 
+  width: 100%;
+}
+.participant_block img{
+  margin-right: 1%;
+}
+.participant_details{
+  display:flex;
+  flex-direction:column;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  justify-content: center;
+}
+.participant_details div
+{
+  width: 100%;
+  font-size: 1 rem;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#editor_container{
+  width: 100%;
+  min-height: 50px;
+  margin: 0 1%;
+}
+
+#editor{
+  border:0;
+  border-radius: 2rem;
+  outline: none;
+  overflow: hidden;
+  margin: 1% ;
+  width: calc(95% - 100px);
+  height: 100%;
+  resize: none;
+  padding: 1% 2%;
+  align-self: center;
+}
+
+#editor_clear{
+  border: 0;
+  outline: none;
+  float: right; align-self: center;cursor: pointer
+}
+
+
+input[type="file"] { 
+  opacity: 0; /* make transparent */
+  z-index: -1; /* move under anything else */
+  position: absolute; /* don't let it take up space */
+}
+
+pre{
+  font-size: 1em;
+  white-space:pre-wrap;
+  color: inherit;
+  font-family: inherit;
+}
